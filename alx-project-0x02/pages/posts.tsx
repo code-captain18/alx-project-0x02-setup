@@ -1,5 +1,5 @@
 import React from 'react'
-import { GetStaticProps, GetStaticPropsResult } from 'next'
+import { GetStaticProps } from 'next'
 import Header from '@/components/layout/Header'
 import PostCard from '@/components/common/PostCard'
 import { type PostProps, type PostsPageProps } from '@/interfaces'
@@ -66,7 +66,7 @@ const PostsPage = ({ posts, error }: PostsPageProps) => {
     )
 }
 
-export async function getStaticProps(): Promise<GetStaticPropsResult<PostsPageProps>> {
+export const getStaticProps: GetStaticProps<PostsPageProps> = async () => {
     try {
         const response = await fetch('https://jsonplaceholder.typicode.com/posts?_limit=10')
 
