@@ -110,6 +110,29 @@ const Header = () => {
                                 Posts
                             </Link>
                         </li>
+                        <li>
+                            <Link
+                                href="/users"
+                                style={{
+                                    textDecoration: 'none',
+                                    color: '#333',
+                                    fontWeight: '500',
+                                    padding: '0.5rem 1rem',
+                                    borderRadius: '6px',
+                                    transition: 'all 0.2s ease'
+                                }}
+                                onMouseEnter={(e) => {
+                                    e.currentTarget.style.backgroundColor = '#f8f9fa'
+                                    e.currentTarget.style.color = '#007bff'
+                                }}
+                                onMouseLeave={(e) => {
+                                    e.currentTarget.style.backgroundColor = 'transparent'
+                                    e.currentTarget.style.color = '#333'
+                                }}
+                            >
+                                Users
+                            </Link>
+                        </li>
                     </ul>
                 </nav>
             </div>
