@@ -17,3 +17,10 @@ export interface ButtonProps {
     type?: 'button' | 'submit' | 'reset';
     disabled?: boolean;
 }
+
+export interface PostProps {
+    id: number;
+    title: string;
+    body: string;
+    userId: number;
+}
